@@ -19,7 +19,12 @@ namespace DataAccessLayer.Infrastructure.Repository
 
         public void Update(CategoryModels category)
         {
-            _context.Categories.Update(category);
+            var categoryDb = _context.Categories.FirstOrDefault(z => z.Id == category.Id);
+            if(categoryDb != null)
+            {
+                categoryDb.Name = category.Name;
+                categoryDb.DisplayOrder = category.DisplayOrder;
+            }
         }
     }
 }

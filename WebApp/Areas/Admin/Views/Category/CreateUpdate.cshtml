@@ -1,0 +1,47 @@
+﻿@using Models.ViewModels;
+@model VMCategory
+@{
+    ViewData["Title"] = "Update";
+}
+
+<form method="post">
+    <div class="col-6">
+        <div class="border p-2 mt-3">
+            <div class="row pb-3">
+                <h3> @(Model.Category.Id == 0 ? "New" : "Update")  Category </h3>
+            </div>
+            <div class="row form-group">
+                <label asp-for="Category.Name" class="col-3"></label>
+                <div class="col-9">
+                    <input asp-for="Category.Name" class="form-control" />
+                    <span asp-validation-for="Category.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group">
+                <label asp-for="Category.DisplayOrder" class="col-3"></label>
+                <div class="col-9">
+                    <input asp-for="Category.DisplayOrder" class="form-control" />
+                    <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <input type="hidden" asp-for="Category.Id" />
+                @if (Model.Category.Id == 0)
+                {
+                    <button type="submit" class="btn btn-primary">Save</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-primary">Update</button>
+                }
+                <a asp-controller="Category" asp-action="Index" class="btn btn-success">List</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
