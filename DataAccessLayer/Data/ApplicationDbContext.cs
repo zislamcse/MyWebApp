@@ -8,5 +8,6 @@ namespace DataAccessLayer.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<CategoryModels> Categories { get; set; }
+        public DbSet<ProductModels> Products { get; set; }
     }
 }
