@@ -26,7 +26,7 @@
             <div class="row form-group">
                 <label asp-for="Product.Price" class="col-3"></label>
                 <div class="col-9">
-                    <input asp-for="Product.Price" class="form-control"/>
+                    <input asp-for="Product.Price" class="form-control" />
                     <span asp-validation-for="Product.Price" class="text-danger"></span>
                 </div>
             </div>
@@ -41,11 +41,12 @@
             <div class="row form-group">
                 <label asp-for="Product.ImageUrl" class="col-3"></label>
                 <div class="col-9">
-                    <input type="file" name="file" class="form-select" />
+                    <input type="file" id="image" name="file" class="form-select" />
                 </div>
             </div>
             <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary">Save</button>
+                <inut type="hidden" asp-for="Product.Id" />
+                <button class="btn btn-primary" onclick="return ValidateEmpty()" type="submit">Save</button>
             </div>
         </div>
     </div>
@@ -55,4 +56,17 @@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
+    <script>
+        function ValidateEmpty() {
+            if (document.getElementById("image").value == ""){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                });
+                return false;
+            }
+        }
+    </script>
 }

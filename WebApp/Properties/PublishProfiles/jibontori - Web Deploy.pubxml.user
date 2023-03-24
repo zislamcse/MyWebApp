@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfE5XvvIJtU6zNDlvnh4w6QAAAAACAAAAAAAQZgAAAAEAACAAAABqc5XWcPPCfKMRI+rg1nxn3gcwIQpS2Kjm93J8N1tlVwAAAAAOgAAAAAIAACAAAAA5LLtrDj4WlLIgEvUhnQpGEa4mq6kUiAR9R+VIH4N5uoAAAAC4RZQ8B49fRgMMImpzVkkanwHipxwY+MucNUKZSGNxJsXp/OAget4R8vmOoD81S67JYE0Qe1soe73J+nym7q+A7Cc8ntykLpeh2uy00bsY03tfuNwmHsB78spNDguV8lN9JdQx4rcK+++ZMMdUvm1bpWfvdUJcsnc1nIvjv8hOn0AAAAA7RbJET5O+Z6MPg4ikXUeOgxIFyyRyp3hwJGV5mdxnjftBYoaUTnW8l5pjVjVcne6F+khEZ1haOkJOc+vYx4UO</EncryptedPassword>
+    <History>True|2023-03-21T17:59:05.3093049Z;False|2023-03-21T23:54:48.6048166+06:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="DataAccessLayer.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:zislam.database.windows.net,1433%3bInitial Catalog=WebApp_db%3bUser Id=zislam%40zislam%3bPassword=Zz0177443~</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

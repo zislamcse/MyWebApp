@@ -10,7 +10,6 @@ namespace Models
         public double Price { get; set; }
         [ValidateNever]
         public string ImageUrl { get; set; }
-        [ValidateNever]
         public int CategoryId { get; set; }
         [ValidateNever]
         public CategoryModels Category { get; set; }
